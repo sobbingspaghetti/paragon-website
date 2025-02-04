@@ -21,7 +21,7 @@ body{
 
     width:90vw;
     height:90vh;
-    background:url('img/desat.png') no-repeat center center;
+    background:url('img/BACKGROUND.png') no-repeat center center;
     background-size:contain;
     overflow:hidden;
     z-index: -10;
