@@ -2,41 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    
 }
 
-/*BACKGROUND*/
-
-html, body {
-    height: 100%;
-    overflow: hidden; 
+body{
+    background-color: black;
+    overflow:hidden;
 }
 
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; 
-    height: 100%;
-    background-image: url('IMG/desat.png');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    transition: transform 0.1s ease-out;
+.flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.background .background-image{
+.background{
+
+    width:90vw;
+    height:90vh;
+    background:url('img/desat.png') no-repeat center center;
+    background-size:contain;
+    overflow:hidden;
     z-index: -10;
+    position:relative;
 }
-
-
-/*INPUT*/
 
 #tv-input{
-    position: fixed;
-    overflow:inherit;
-    left: 1431px;
-    top: 230px;
-    z-index: 10;
-    transform: translateX(-30%)
+  z-index: 10; 
+  position:absolute;
+  top: 30vh;
+  left: 70vw;
+}
+
+#answer{
+    z-index: 10; 
+    position:absolute;
+    top: 30vh;
+    left: 70vw;
+    z-index: 9;
 }
 
 input{
@@ -52,14 +56,9 @@ input{
     color: white;
 }
 
-#answer{
-    position: fixed;
-    overflow:hidden;
-    left: 1431px;
-    top: 230px;
-    z-index: 11;
-    transform: translateX(-30%)
-}
+
+
+
 
 p{
     height: 100px;
@@ -76,8 +75,9 @@ p{
 }
 
 #keywordInput{
-text-align: center;
-
+    text-align: center;   
+    }
     
-}
-
+ #keywordInput::placeholder {
+         color: white;
+  }
