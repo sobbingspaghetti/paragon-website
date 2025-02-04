@@ -35,13 +35,6 @@ body{
   left: 70vw;
 }
 
-#answer{
-    z-index: 10; 
-    position:absolute;
-    top: 30vh;
-    left: 70vw;
-    z-index: 9;
-}
 
 input{
     height: 100px;
@@ -58,26 +51,10 @@ input{
 
 
 
-
-
-p{
-    height: 100px;
-    width: 190px;
-    text-align: center;
-    background-color: transparent;
-    border-radius: 10px;
-    text-decoration: solid;
-    text-shadow:  -1px -1px 3px rgba(255,255,255,.2),
-    -1px 1px 3px rgba(255,255,255,.2),
-    1px -1px 3px rgba(255,255,255,.2),
-    1px 1px 3px rgba(255,255,255,.2);
-    color: white;
-}
-
 #keywordInput{
     text-align: center;   
     }
-    
+
  #keywordInput::placeholder {
          color: white;
   }
