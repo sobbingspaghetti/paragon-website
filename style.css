@@ -21,8 +21,8 @@ body{
 
     width:90vw;
     height:90vh;
-    background:url('IMG/BACKGROUND.png') no-repeat center center;
-    background-size:contain;
+    background: url('IMG/BACKGROUND.png') no-repeat center center;
+    background-size: contain;
     overflow:hidden;
     z-index: -10;
     position:relative;
