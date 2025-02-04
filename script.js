@@ -39,6 +39,9 @@ document.addEventListener('mousemove', handleMouseMove);
 animateBackground();
 
 
+
+
+
 //form
 
 document.getElementById('tv-input').addEventListener('submit', async function(event) {
@@ -53,7 +56,7 @@ document.getElementById('tv-input').addEventListener('submit', async function(ev
     });
 
     const result = await response.json();  // Get the JSON response from the backend
-    document.getElementById('response').innerText = result.message;  // Display the message
+    document.getElementById('answer').innerText = result.message;  // Display the message
 });
 
 

@@ -33,15 +33,38 @@ html, body {
 #tv-input{
     position: fixed;
     overflow:inherit;
-    left: 1400px;
-    top: 200px;
+    left: 1431px;
+    top: 230px;
     z-index: 10;
     transform: translateX(-30%)
 }
 
 input{
-    height: 90px;
-    width: 150px;
+    height: 100px;
+    width: 190px;
+    background-color: transparent;
+    border-radius: 10px;
+    text-decoration: solid;
+    text-shadow:  -1px -1px 3px rgba(255,255,255,.2),
+    -1px 1px 3px rgba(255,255,255,.2),
+    1px -1px 3px rgba(255,255,255,.2),
+    1px 1px 3px rgba(255,255,255,.2);
+    color: white;
+}
+
+#answer{
+    position: fixed;
+    overflow:hidden;
+    left: 1431px;
+    top: 230px;
+    z-index: 11;
+    transform: translateX(-30%)
+}
+
+p{
+    height: 100px;
+    width: 190px;
+    text-align: center;
     background-color: transparent;
     border-radius: 10px;
     text-decoration: solid;
