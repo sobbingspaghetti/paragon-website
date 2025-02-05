@@ -7,12 +7,32 @@
    <title>PARAGON</title>
 </head>
 <body>
-   <div class="form-container">
+ <div class="form-container">
       <form id="tv-input">
          <textarea type="text" id="keywordInput" placeholder="..."></textarea>
-         <button type="submit"></button>
+         <button class="enter" type="submit"></button>
       </form>
+      
+   <div class="music">
+      <buttom id="play-music"></buttom>
+         <audio src="audio/bluevelvet.mp3"></audio>
+         <audio src="audio/chetbaker1.mp3"></audio>
+         <audio src="audio/doris.mp3"></audio>
+         <audio src="audio/eotw.mp3"></audio>
+         <audio src="audio/hurt.mp3"></audio>
+         <audio src="audio/stardust.mp3"></audio>
+
+   </div>
+
+   <div id="music-popup">
+      <div><strong>Now Listening:</strong></div>
+      <div class="song-title-container"><span id="popupTitle"></span></div>
+      <div id="popupArtist"></div>
+  </div>
+
  </div>
+
+ 
 
  <div class="small-screen">
    <h2>Please use a larger screen/desktop!<br>

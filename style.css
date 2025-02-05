@@ -158,7 +158,7 @@ textarea:focus{
     overflow:none;
 }
 
-button{
+.enter{
     right: 12vw; 
     top: 23vh;
     position:relative;
@@ -168,6 +168,26 @@ button{
     
 }
 
+.music{
+    display: flex;
+    position: relative;
+    left: 85vw;
+    top: 0.1vh;
+}
+
+#play-music{
+    display: block;
+    background-color: transparent;
+    align-content:center;
+    justify-content: center;
+    width: 13vw;
+    height: 18vh;
+    rotate: -5deg;
+    border: none;
+
+}
+
+
 .small-screen{
     display: none;
     align-items:center;
@@ -175,7 +195,49 @@ button{
     
 }
 
+#music-popup{
+    position: absolute;
+    text-align: center;
+    top: 1%;
+    left: 1%;
+    width: 150px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    display: none;
+    font-size: 12px;
+    padding: 10px 20px;
+    z-index: 1000;
+    opacity: 75%;
+    overflow:hidden;
+    white-space: nowrap;
+}
 
+.song-title-container {
+    display: inline-block;
+    width: 150px; 
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.scrolling-title {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 6s linear forwards;
+}
+
+@keyframes scrollText {
+
+    from { transform: translateX(0); }
+
+    to { transform: translateX(-100%); }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
 
 
 @media (max-width: 1100px), (max-height: 550px){
