@@ -1,3 +1,4 @@
+/*
 * {
     margin: 0;
     padding: 0;
@@ -35,17 +36,20 @@ body{
     position: absolute;
     top: 32%;
     left: 64.5%;
-    text-wrap: normal; 
+    width: 13vw; 
+    height: auto;
+    max-height: 26vh;
   }
   
   textarea {
-    height: 10%; 
-    width: 90%;
+    height: 100%; 
+    width: 100%;
     align-content: center;
     border: none;
     background-color: transparent;
     border-radius: 20%;
     text-decoration: solid;
+    font-size: min(2vw, 16px); 
     text-shadow: 
     -1px -1px 3px rgba(255,255,255,.2),
     -1px 1px 3px rgba(255,255,255,.2),
@@ -83,6 +87,92 @@ button{
     background-color: transparent;
     width: 3vw;
     height: 4vh;
+    
+}
+*/
+
+
+body {
+    background-color: black;
+    overflow: hidden;
+    margin: 0;
 }
 
 
+
+.flex {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('IMG/what.png') no-repeat center center;
+    background-size: contain;
+    z-index: -10; 
+}
+
+#tv-input {
+    z-index: 10; 
+    position: absolute;
+    top: 35%;
+    left: 61.5%;
+    width: auto;
+    height: auto;
+  }
+  
+  textarea {
+    height: 7.5vh; 
+    width: 8vw;
+    align-content: center;
+    border: none;
+    background-color: transparent;
+    border-radius: 20%;
+    text-decoration: solid;
+    text-shadow: 
+    -1px -1px 3px rgba(255,255,255,.2),
+    -1px 1px 3px rgba(255,255,255,.2),
+    1px -1px 3px rgba(255,255,255,.2),
+    1px 1px 3px rgba(255,255,255,.2);
+    color: white;
+    resize: none; 
+    overflow: hidden; 
+    transform: skew(2deg, -2deg);
+    padding: 20px;
+  }
+  
+  #keywordInput {
+    text-align: center; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    resize: none; 
+    font-size: inherit;
+    line-height: normal;
+    overflow: hidden;
+  }
+  
+  #keywordInput::placeholder {
+    color: white;
+    padding:none;
+    font-size:inherit;
+  }
+
+button{
+    display: block;
+    z-index: 15;
+    right: 12vw;
+    top: 24vh;
+    position: absolute;
+    background-color: transparent;
+    width: 3vw;
+    height: 4vh;
+    
+}
