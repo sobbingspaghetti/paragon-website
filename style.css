@@ -12,6 +12,8 @@ body{
 }
 
 .flex{
+    width: 100vw;
+    height:100vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -31,14 +33,14 @@ body{
 #tv-input {
     z-index: 10; 
     position: absolute;
-    top: 30vh;
-    left: 64.5vw;
+    top: 32%;
+    left: 64.5%;
     text-wrap: normal; 
   }
   
   textarea {
-    height: 17vh; 
-    width: 13vw;
+    height: 10%; 
+    width: 90%;
     align-content: center;
     border: none;
     background-color: transparent;
@@ -83,11 +85,4 @@ button{
     height: 4vh;
 }
 
-
-@media only screen and (min-width: 1440px) {
-    #tv-input{
-      top: 10vh;
-      
-    }
-  }
 
