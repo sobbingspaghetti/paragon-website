@@ -133,6 +133,7 @@ textarea{
     align-content: center;
     text-align: center;
     resize: none;
+    border:none;
     border-radius: 20%;
     transform: skew(2deg, -2deg);
     text-shadow: 
@@ -141,6 +142,10 @@ textarea{
     1px -1px 3px rgba(255,255,255,.2),
     1px 1px 3px rgba(255,255,255,.2);
     color: white;
+}
+
+textarea:focus{ 
+    outline: none;
 }
 
 #keywordInput{
@@ -153,14 +158,26 @@ textarea{
     overflow:none;
 }
 
+button{
+    right: 12vw; 
+    top: 23vh;
+    position:relative;
+    background-color: transparent;
+    width: 3vw;
+    height: 4vh;
+    
+}
+
 .small-screen{
     display: none;
     align-items:center;
     color:white;
+    
 }
 
 
-@media (max-width: 800px), (max-height: 600px){
+
+@media (max-width: 1100px), (max-height: 550px){
    body{
     background-color: black;
    }
@@ -172,63 +189,3 @@ textarea{
    }
 }
 
-
-
-
-/*
-#tv-input {
-    z-index: 10; 
-    position: absolute;
-    top: 35%;
-    left: 61.5%;
-    width: auto;
-    height: auto;
-  }
-  
-  textarea {
-    height: 7.5vh; 
-    width: 8vw;
-    align-content: center;
-    border: none;
-    background-color: transparent;
-    border-radius: 20%;
-    text-decoration: solid;
-    text-shadow: 
-    -1px -1px 3px rgba(255,255,255,.2),
-    -1px 1px 3px rgba(255,255,255,.2),
-    1px -1px 3px rgba(255,255,255,.2),
-    1px 1px 3px rgba(255,255,255,.2);
-    color: white;
-    resize: none; 
-    overflow: hidden; 
-    transform: skew(2deg, -2deg);
-    padding: 20px;
-  }
-  
-  #keywordInput {
-    text-align: center; 
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    resize: none; 
-    font-size: inherit;
-    line-height: normal;
-    overflow: hidden;
-  }
-  
-  #keywordInput::placeholder {
-    color: white;
-    padding:none;
-    font-size:inherit;
-  }
-
-button{
-    display: block;
-    z-index: 15;
-    right: 12vw;
-    top: 24vh;
-    position: absolute;
-    background-color: transparent;
-    width: 3vw;
-    height: 4vh;
-    
-}
