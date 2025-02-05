@@ -21,43 +21,53 @@ body{
 
     width:100vw;
     height:100vh;
-    background: url('IMG/BACKGROUND.png') no-repeat center center;
+    background: url('IMG/yippee.png') no-repeat center center;
     background-size:contain;
     overflow:hidden;
     z-index: -10;
     position:relative;
 }
 
-#tv-input{
-  z-index: 10; 
-  position:absolute;
-  top: 36.5vh;
-  left: 73.5vw;
-  transform: rotate(-2deg);
-}
-
-
-input{
-    height: 11vh;
-    width: 9vw;
-    background-color: transparent;
+#tv-input {
+    z-index: 10; 
+    position: absolute;
+    top: 31vh;
+    left: 64.5vw;
+    transform: rotate(-3deg);
+    text-wrap: normal; 
+  }
+  
+  textarea {
+    height: 17vh; 
+    width: 13vw;
+    align-content: center;
     border: none;
+    background-color: transparent;
+    border-radius: 20%;
     text-decoration: solid;
-    text-shadow:  -1px -1px 3px rgba(255,255,255,.2),
+    text-shadow: 
+    -1px -1px 3px rgba(255,255,255,.2),
     -1px 1px 3px rgba(255,255,255,.2),
     1px -1px 3px rgba(255,255,255,.2),
     1px 1px 3px rgba(255,255,255,.2);
     color: white;
-}
-
-
-
-#keywordInput{
+    resize: none; 
+    overflow: hidden; 
+  }
+  
+  #keywordInput {
     text-align: center; 
-    font-size: 1vw
-}
+    font-size: 1vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    resize: none; 
+    line-height: normal;
+    overflow: hidden;
+  }
+  
+  #keywordInput::placeholder {
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+  }
 
- #keywordInput::placeholder {
-     color: white;
-     font-size: 1vw
-}
