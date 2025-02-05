@@ -18,6 +18,3 @@ document.getElementById('tv-input').addEventListener('submit', async function(ev
     keywordInput.placeholder = result.message;  // Replace placeholder text with response
     keywordInput.value = '';  // Clear the input field
 });
-
-
-
