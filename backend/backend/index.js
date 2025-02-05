@@ -40,7 +40,7 @@ app.post('/check-secret', (req, res) => {
     if (cassoWords[userInput]) {
         res.json({ message: cassoWords[userInput] }); // Send response based on valid secret word
     } else {
-        res.json({ message: "Invalid secret word. Try again!" }); // Invalid secret word
+        res.json({ message: "Invalid" }); // Invalid secret word
     }
 });
 

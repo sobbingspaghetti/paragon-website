@@ -6,6 +6,7 @@ document.getElementById('tv-input').addEventListener('submit', async function(ev
     
     const keywordInput = document.getElementById('keywordInput');  // Get the input element
     const secretWord = keywordInput.value;  // Get the value of the input
+    const errorSound = document.getElementById('error-sound'); // Get the audio element
 
     const response = await fetch('http://localhost:3000/check-secret', {
         method: 'POST',
@@ -14,6 +15,7 @@ document.getElementById('tv-input').addEventListener('submit', async function(ev
     });
 
     const result = await response.json();  // Get the JSON response from the backend
+
     
     keywordInput.placeholder = result.message;  // Replace placeholder text with response
     keywordInput.value = '';  // Clear the input field

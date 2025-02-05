@@ -1,15 +1,15 @@
-require('dotenv').config(); // Load environment variables
+require('dotenv').config(); 
 
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-app.use(cors()); // Allow frontend to communicate with backend
+app.use(cors()); 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Secret words loaded from environment variables
+
 const cassoWords = {
     "paragon": process.env.SECRET_PARAGON,
     "hugo": process.env.SECRET_HUGO,
@@ -40,7 +40,8 @@ app.post('/check-secret', (req, res) => {
     if (cassoWords[userInput]) {
         res.json({ message: cassoWords[userInput] }); // Send response based on valid secret word
     } else {
-        res.json({ message: "Invalid secret word. Try again!" }); // Invalid secret word
+
+        res.json( errorSound.play()); // Invalid secret word
     }
 });
 
