@@ -1,141 +1,64 @@
-/*
-* {
+/* MASTER */
+
+*{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    
+    padding: 0; 
 }
 
 body{
     background-color: black;
-    overflow:hidden;
+    z-index: -11;
+    overflow: hidden;
 }
 
 .flex{
-    width: 100vw;
-    height:100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.background{
-
-    width:100vw;
-    height:100vh;
-    background: url('IMG/yippee.png') no-repeat center center;
-    background-size:contain;
-    overflow:hidden;
-    z-index: -10;
-    position:relative;
-}
-
-#tv-input {
-    z-index: 10; 
-    position: absolute;
-    top: 32%;
-    left: 64.5%;
-    width: 13vw; 
-    height: auto;
-    max-height: 26vh;
-  }
-  
-  textarea {
-    height: 100%; 
-    width: 100%;
-    align-content: center;
-    border: none;
-    background-color: transparent;
-    border-radius: 20%;
-    text-decoration: solid;
-    font-size: min(2vw, 16px); 
-    text-shadow: 
-    -1px -1px 3px rgba(255,255,255,.2),
-    -1px 1px 3px rgba(255,255,255,.2),
-    1px -1px 3px rgba(255,255,255,.2),
-    1px 1px 3px rgba(255,255,255,.2);
-    color: white;
-    resize: none; 
-    overflow: hidden; 
-    transform: skew(-5deg, -3deg);
-    padding: 20px;
-  }
-  
-  #keywordInput {
-    text-align: center; 
-    font-size: 1vw;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    resize: none; 
-    line-height: normal;
-    overflow: hidden;
-  }
-  
-  #keywordInput::placeholder {
-    color: white;
-    text-align: center;
-    font-size: 1vw;
-  }
-
-button{
-    display: block;
-    z-index: 15;
-    right: 12vw;
-    top: 24vh;
-    position: absolute;
-    background-color: transparent;
-    width: 3vw;
-    height: 4vh;
-    
-}
-*/
-
-*{
-    margin: 0;
-    padding: 0;
-    z-index:-11;
-}
-
-body {
-    background-color: black;
-    overflow: hidden;
-    margin: 0;
-    background-image: url('IMG/what.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -10;
-}
-
-
-.form-container {
-    width: 100%;
-    height:100%;
-    z-index: 10;
-}
-
-#tv-input {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
     position: relative;
-    top: 31vh;
-    left: 64.5vw;
-  }
+    overflow: inherit;
+    transition: transform 0.1s ease-out;
+}
 
-textarea{
-    background-color: transparent;
-    height: 16vh; 
-    width: 13vw;
-    align-content: center;
-    text-align: center;
-    resize: none;
-    border:none;
+
+
+
+/* TV */
+
+.flex img{
+    min-height: auto;
+    min-width: 100%;
+    object-fit: cover;
+    flex: 1 1 auto;
+}
+
+.tv{
+    display: block;
+    height: 14%;
+    width: 13.75%;
+    top: 34%;
+    right: 21.7%;
     border-radius: 20%;
-    transform: skew(2deg, -2deg);
+    transform: skew(3deg, -5deg)
+               rotate(2deg);
+    position: absolute;
+    z-index: 10;
+    align-content:center;
+    overflow:hidden;
+}
+
+#keywordInput{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    transform: skew(3deg, 358deg)
+               rotate(3deg);
+    resize: none;
+    overflow: hidden;
+    text-align: center;
+    align-content:center;
+    border:none;
     text-shadow: 
     -1px -1px 3px rgba(255,255,255,.2),
     -1px 1px 3px rgba(255,255,255,.2),
@@ -150,6 +73,7 @@ textarea:focus{
 
 #keywordInput{
     overflow:none;
+    font-size: 2vh;
 }
 
 
@@ -158,41 +82,31 @@ textarea:focus{
     overflow:none;
 }
 
-.enter{
-    right: 12vw; 
-    top: 23vh;
-    position:relative;
-    background-color: transparent;
-    width: 3vw;
-    height: 4vh;
-    
-}
+
+
+
+/* MUSIC */
 
 .music{
-    display: flex;
-    position: relative;
-    left: 85vw;
-    top: 0.1vh;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    height: 22%;
+    width: 15%;
+    right: 0.5%;
+    top: 17%;
+    transform: 
+        rotate(-8deg)
+        skew(-4deg);
+    align-content: center;
+    overflow: hidden;
 }
 
 #play-music{
-    display: block;
     background-color: transparent;
-    align-content:center;
-    justify-content: center;
-    width: 13vw;
-    height: 18vh;
-    rotate: -5deg;
+    width: 100%;
+    height: 100%;
     border: none;
-
-}
-
-
-.small-screen{
-    display: none;
-    align-items:center;
-    color:white;
-    
 }
 
 #music-popup{
@@ -240,15 +154,165 @@ textarea:focus{
 }
 
 
-@media (max-width: 1100px), (max-height: 550px){
-   body{
-    background-color: black;
-   }
-   .form-container{
-    display:none;
-   }
-   .small-screen{
-    display:block;
-   }
+
+
+/* CASSOWARY */
+
+.cassowary{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    height: 22%;
+    width: 12.5%;
+    left: 2%;
+    top: 46%;
+    align-content: center;
+    overflow: hidden;
 }
 
+#cassowary-button{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+
+/* PAPERS */
+
+.papers{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    height: 10%;
+    width: 17%;
+    right: 17%;
+    bottom: 12%;
+    transform: rotate(8deg);
+    align-content: center;
+    overflow: hidden;
+}
+
+#papers-button{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+
+/* BOARD */
+
+.board-1{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    height: 9%;
+    width: 6.5%;
+    left: 14%;
+    top: 27%;
+    transform: rotate(15deg)
+    skewX(12deg);
+}
+
+#b-1{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.board-2{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    height: 6%;
+    width: 4%;
+    top: 39%;
+    left: 14%;
+}
+
+#b-2{
+    background-color: transparent;
+    width: 100%;
+    height: 100%; 
+    border: none;
+}
+
+
+.board-3{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    height: 4%;
+    width: 3%;
+    top: 46%;
+    left: 18.5%;
+
+}
+
+#b-3{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;  
+    border: none; 
+}
+
+
+.board-4{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 38.5%;
+    left: 20%;
+    width: 3%;
+    height: 7%;
+    transform: skew(-5deg, 20deg);
+}
+
+#b-4{
+    background-color:transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+.board-5{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 31%;
+    left: 21.5%;
+    height: 4%;
+    width: 5%;
+    transform: rotate(15deg)
+}
+
+#b-5{
+    background-color:transparent;
+    width: 100%;
+    height: 100%; 
+    border: none;
+}
+
+.board-6{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 41%; 
+    left: 24.5%;
+    height: 4%;
+    width: 2%;
+}
+
+#b-6{
+    background-color:transparent;
+    width: 100%;
+    height: 100%;  
+    border: none;
+}

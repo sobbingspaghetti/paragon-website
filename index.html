@@ -1,46 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="style.css" rel="stylesheet">
-   <title>PARAGON</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>PARAGON</title>
 </head>
 <body>
- <div class="form-container">
-      <form id="tv-input">
-         <textarea type="text" id="keywordInput" placeholder="..."></textarea>
-         <button class="enter" type="submit"></button>
-      </form>
-      
-   <div class="music">
-      <buttom id="play-music"></buttom>
+    <div class="flex">
+        <img src="img/bg.JPG">
+        <div class="tv">
+            <textarea type="text" spellcheck="false" id="keywordInput" placeholder="..."></textarea>
+        </div>
+
+        <div class="music">
+          <button id="play-music"></button>
+
          <audio src="audio/bluevelvet.mp3"></audio>
          <audio src="audio/chetbaker1.mp3"></audio>
          <audio src="audio/doris.mp3"></audio>
          <audio src="audio/eotw.mp3"></audio>
          <audio src="audio/hurt.mp3"></audio>
          <audio src="audio/stardust.mp3"></audio>
+        </div>
 
-   </div>
+        <div id="music-popup">
+            <div><strong>Now Listening:</strong></div>
+            <div class="song-title-container"><span id="popupTitle"></span></div>
+            <div id="popupArtist"></div>
+        </div>
 
-   <div id="music-popup">
-      <div><strong>Now Listening:</strong></div>
-      <div class="song-title-container"><span id="popupTitle"></span></div>
-      <div id="popupArtist"></div>
-  </div>
 
- </div>
+        <div class="cassowary">
+            <button id="cassowary-button"></button>
+        </div>
 
- 
 
- <div class="small-screen">
-   <h2>Please use a larger screen/desktop!<br>
-   This will not work on this screensize :[</h2>
- </div>
+        <div class="papers">
+            <button id="papers-button">
+            </button>
+        </div>
+
+
+        <div class="board-1">
+            <button id="b-1"></button>
+        </div>
+
+        <div class="board-2">
+            <button id="b-2"></button>
+        </div>
+
+        <div class="board-3">
+            <button id="b-3"></button>
+        </div>
+
+        <div class="board-4">
+            <button id="b-4"></button>
+        </div>
+
+        <div class="board-5">
+            <button id="b-5"></button>
+        </div>
+
+        <div class="board-6">
+            <button id="b-6"></button>
+        </div>
+    </div>
 
 </body>
-
 <script src="script.js"></script>
-
 </html>
